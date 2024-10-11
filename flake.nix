@@ -19,5 +19,9 @@
         inherit pkgs lib;
         modules = [ ./machines/common ./machines/desktop ./users/aprilia ];
       };
+      homeConfigurations."acer" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs lib;
+        modules = [ ./machines/common ./machines/acer ./users/aprilia ];
+      };
     };
 }

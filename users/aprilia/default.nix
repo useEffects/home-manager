@@ -8,5 +8,11 @@
     enable = true;
     userEmail = "joel.sr1024@gmail.com";
     userName = "useEffects";
+    extraConfig = {
+      credential = {
+        helper = "${pkgs.git-credential-manager}/bin/git-credential-manager";
+        credentialStore = "cache";
+      };
+    };
   };
 }
