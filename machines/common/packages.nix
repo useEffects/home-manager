@@ -13,5 +13,10 @@ with pkgs; [
   pnpm
   python3
   discord
+  gnome-tweaks
+  gnomeExtensions.user-themes
+  gnomeExtensions.tray-icons-reloaded
+  gnomeExtensions.quick-settings-tweaker
+  catppuccin-gtk
 ]
 

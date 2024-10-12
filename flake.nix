@@ -9,7 +9,12 @@
   };
 
   outputs =
-    { self, nixpkgs, home-manager, ... }:
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -19,13 +24,17 @@
     {
       homeConfigurations."desktop" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs lib;
-        modules = [ ./machines/common ./machines/desktop ./users/aprilia ];
+        modules = [
+          ./machines/common
+          ./machines/desktop
+          ./users/aprilia
+        ];
       };
       homeConfigurations."acer" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs lib;
-        modules = [ 
-          ./machines/common 
-          ./machines/acer 
+        modules = [
+          ./machines/common
+          ./machines/acer
           ./users/aprilia
           { nixpkgs.overlays = [ inputs.catppuccin-vsc.overlays.default ]; }
         ];

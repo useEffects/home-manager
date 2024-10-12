@@ -5,5 +5,5 @@
     "editor.wordWrap": "on",
     "editor.fontLigatures": true,
     "workbench.colorTheme": "Catppuccin Mocha",
-    "catppuccin.accentColor": "pink"
+    "nix.formatterPath": "nixfmt"
 }

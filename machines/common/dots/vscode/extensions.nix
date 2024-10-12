@@ -1,6 +1,7 @@
-{ pkgs, lib, ... }: 
+{ pkgs, lib, ... }:
 
-with pkgs.vscode-extensions; [
+with pkgs.vscode-extensions;
+[
   jnoortheen.nix-ide
   ms-vscode.cpptools
   ms-vscode.cmake-tools
@@ -19,7 +20,8 @@ with pkgs.vscode-extensions; [
   twxs.cmake
   james-yu.latex-workshop
   catppuccin.catppuccin-vsc # added by the overlay
-] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+]
+++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
   {
     name = "vscode-java-pack";
     publisher = "vscjava";
