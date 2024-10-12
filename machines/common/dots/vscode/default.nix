@@ -2,18 +2,13 @@
   config,
   pkgs,
   lib,
-  self,
   ...
 }:
-
-let 
-  inputs = self.inputs;
-in 
 
 {
   programs.vscode = {
     enable = true;
-    extensions = import ./extensions.nix { inherit pkgs lib inputs; };
+    extensions = import ./extensions.nix { inherit pkgs lib; };
     mutableExtensionsDir = false;
   };
   home.file = {

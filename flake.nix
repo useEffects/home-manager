@@ -5,14 +5,16 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    catppuccin-vsc.url = "https://flakehub.com/f/catppuccin/vscode/*.tar.gz";
   };
 
   outputs =
-    { nixpkgs, home-manager, ... }:
+    { self, nixpkgs, home-manager, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
       lib = nixpkgs.lib;
+      inputs = self.inputs;
     in
     {
       homeConfigurations."desktop" = home-manager.lib.homeManagerConfiguration {
@@ -24,13 +26,8 @@
         modules = [ 
           ./machines/common 
           ./machines/acer 
-          ./users/aprilia 
-          home-manager.nixosModules.home-manager { 
-            home-manager = { 
-              useUserPackages = true;
-              useGlobalPkgs = true; 
-            };
-          }
+          ./users/aprilia
+          { nixpkgs.overlays = [ inputs.catppuccin-vsc.overlays.default ]; }
         ];
       };
     };

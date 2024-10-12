@@ -1,7 +1,7 @@
 { ... }:
 {
   imports = [
-    # ./vscode
+    ./vscode
     ./git
   ];
 }
