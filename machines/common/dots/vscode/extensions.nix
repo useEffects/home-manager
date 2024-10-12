@@ -1,24 +1,30 @@
-{ pkgs, lib, ... }: 
+{ pkgs, lib, catppuccin-vsc, ... }: 
 
-with pkgs.vscode-extensions; [
-  jnoortheen.nix-ide
-  ms-vscode.cpptools
-  ms-vscode.cmake-tools
-  ms-vscode-remote.remote-ssh
-  ms-python.python
-  redhat.java
-  redhat.vscode-yaml
-  redhat.vscode-xml
-  vscjava.vscode-java-debug
-  vscjava.vscode-java-test
-  vscjava.vscode-maven
-  vscjava.vscode-java-dependency
-  vscodevim.vim
-  ritwickdey.liveserver
-  bradlc.vscode-tailwindcss
-  twxs.cmake
-  james-yu.latex-workshop
-] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+let
+  extensionsInNixSearch = [
+    "jnoortheen.nix-ide"
+    "ms-vscode.cpptools"
+    "ms-vscode.cmake-tools"
+    "ms-vscode-remote.remote-ssh"
+    "ms-python.python"
+    "redhat.java"
+    "redhat.vscode-yaml"
+    "redhat.vscode-xml"
+    "vscjava.vscode-java-debug"
+    "vscjava.vscode-java-test"
+    "vscjava.vscode-maven"
+    "vscjava.vscode-java-dependency"
+    "vscodevim.vim"
+    "ritwickdey.liveserver"
+    "bradlc.vscode-tailwindcss"
+    "twxs.cmake"
+    "james-yu.latex-workshop"
+  ];
+in
+
+pkgs.catppuccin-vsc # Added by overlay
+++ [ (map (extension: pkgs.vscode-extensions.${extension}) extensionsInNixSearch) ] 
+++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
   {
     name = "vscode-java-pack";
     publisher = "vscjava";

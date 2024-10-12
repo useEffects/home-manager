@@ -21,7 +21,17 @@
       };
       homeConfigurations."acer" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs lib;
-        modules = [ ./machines/common ./machines/acer ./users/aprilia ];
+        modules = [ 
+          ./machines/common 
+          ./machines/acer 
+          ./users/aprilia 
+          home-manager.nixosModules.home-manager { 
+            home-manager = { 
+              useUserPackages = true;
+              useGlobalPkgs = true; 
+            };
+          }
+        ];
       };
     };
 }

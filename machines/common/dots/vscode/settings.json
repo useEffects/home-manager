@@ -3,5 +3,7 @@
     "files.autoSave": "afterDelay",
     "window.zoomLevel": 2,
     "editor.wordWrap": "on",
-    "editor.fontLigatures": true
+    "editor.fontLigatures": true,
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "catppuccin.accentColor": "pink"
 }
