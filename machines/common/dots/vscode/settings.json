@@ -3,6 +3,7 @@
     "files.autoSave": "afterDelay",
     "window.zoomLevel": 2,
     "editor.wordWrap": "on",
+    "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
     "editor.fontLigatures": true,
     "workbench.colorTheme": "Catppuccin Mocha",
     "nix.formatterPath": "nixfmt",

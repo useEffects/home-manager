@@ -20,6 +20,7 @@ with pkgs.vscode-extensions;
   twxs.cmake
   james-yu.latex-workshop
   catppuccin.catppuccin-vsc # added by the overlay
+  tamasfe.even-better-toml
 ]
 ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
   {
