@@ -1,8 +1,8 @@
 { config, ... }:
 
-let 
+let
   currentPath = ./.;
-in 
+in
 
 {
   programs.zsh = {
@@ -12,7 +12,7 @@ in
     syntaxHighlighting.enable = true;
     history = {
       size = 10000;
-      path = "${config.xdg.dataHome}/zsh/history"; 
+      path = "${config.xdg.dataHome}/zsh/history";
     };
     initExtra = ''
       source "${currentPath}/mocha-colors.zsh"      

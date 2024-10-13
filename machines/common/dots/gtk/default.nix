@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 let
   themeDir = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}";

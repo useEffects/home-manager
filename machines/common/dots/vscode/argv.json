@@ -16,7 +16,7 @@
 
 	// Unique id used for correlating crash reports sent from this instance.
 	// Do not edit this value.
-	"crash-reporter-id": "6551739e-48c9-4ef4-bc7f-dd05ebc5f035",
+	// "crash-reporter-id": "6551739e-48c9-4ef4-bc7f-dd05ebc5f035",
 
 	"disable-hardware-acceleration": true
 }

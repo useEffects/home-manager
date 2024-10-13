@@ -1,6 +1,7 @@
 { pkgs }:
 
-with pkgs; [
+with pkgs;
+[
   vscode
   nixfmt-rfc-style
   discord
@@ -19,4 +20,3 @@ with pkgs; [
   gnomeExtensions.quick-settings-tweaker
   catppuccin-gtk
 ]
-
