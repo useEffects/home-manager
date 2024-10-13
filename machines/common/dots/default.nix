@@ -6,5 +6,7 @@
     ./gtk
     ./zsh
     ./starship
+    ./kitty
+    ./neofetch
   ];
 }
