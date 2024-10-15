@@ -5,6 +5,7 @@ with pkgs;
   vscode
   nixfmt-rfc-style
   discord
+  slack
   flameshot
   git
   gh
@@ -13,7 +14,6 @@ with pkgs;
   yarn
   pnpm
   python3
-  discord
   gnome-tweaks
   gnomeExtensions.user-themes
   gnomeExtensions.tray-icons-reloaded
