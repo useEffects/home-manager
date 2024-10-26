@@ -14,6 +14,7 @@ with pkgs.vscode-extensions;
   vscjava.vscode-java-test
   vscjava.vscode-maven
   vscjava.vscode-java-dependency
+  golang.go
   vscodevim.vim
   ritwickdey.liveserver
   bradlc.vscode-tailwindcss

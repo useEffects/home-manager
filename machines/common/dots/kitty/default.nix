@@ -14,6 +14,6 @@ in
     enable = true;
   };
   home.file = {
-    "${config.xdg.configHome}/kitty/kitty.conf".source = lib.mkDefault "${cwd}/kitty.conf";
+    "${config.xdg.configHome}/kitty/kitty.conf".source = lib.mkForce "${cwd}/kitty.conf";
   };
 }
