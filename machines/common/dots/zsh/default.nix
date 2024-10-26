@@ -16,6 +16,8 @@ in
     };
     initExtra = ''
       source "${currentPath}/mocha-colors.zsh"      
+      bindkey '^[[1;5D' backward-word
+      bindkey '^[[1;5C' forward-word
     '';
   };
 }
